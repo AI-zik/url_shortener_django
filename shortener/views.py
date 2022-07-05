@@ -26,6 +26,7 @@ class RedirectShortLinkView(RedirectView):
 
 class ManageShortenedLinkView(APIView):
 
+    authentication_classes = []
     def post(self, request, format=None):
         data = request.data
         length = random.randint(6, 10)
