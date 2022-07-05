@@ -2,6 +2,8 @@ import random
 import string
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import RedirectView
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -24,9 +26,9 @@ class RedirectShortLinkView(RedirectView):
         address = get_object_or_404(ShortenedLink, slug=slug)
         return address.url
 
+@method_decorator(csrf_exempt, name='dispatch')
 class ManageShortenedLinkView(APIView):
 
-    authentication_classes = []
     def post(self, request, format=None):
         data = request.data
         length = random.randint(6, 10)
