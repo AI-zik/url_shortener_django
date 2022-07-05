@@ -139,4 +139,4 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','http://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','http://127.0.0.1:5500']
