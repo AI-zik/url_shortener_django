@@ -137,6 +137,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5500",
     "http://127.0.0.1:3000",
     "http://localhost:3000",
+    "https://ai-zik-url-shortener.netlify.app"
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','http://127.0.0.1:5500']
+CSRF_TRUSTED_ORIGINS = ['https://ai-zik-url-shortener.netlify.app','http://127.0.0.1:5500']
